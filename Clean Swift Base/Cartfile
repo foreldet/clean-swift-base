@@ -1,0 +1,4 @@
+github "Swinject/Swinject"
+github "Alamofire/Alamofire"
+github "onevcat/Kingfisher"
+github "SwiftyJSON/SwiftyJSON"
