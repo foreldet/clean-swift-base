@@ -17,8 +17,14 @@ protocol SwinjectConfigurer {
 extension AppDelegate {
     func configureSwinject() {
         mainContainer = Container()
+        configurePresentationLayer()
+        configureDomainLayer()
         configureDataLayer()
         LandingConfigurator.sharedInstance.setContainer(container: mainContainer)
+    }
+    
+    private func configurePresentationLayer() {
+        
     }
     
     private func configureDataLayer() {
@@ -32,5 +38,18 @@ extension AppDelegate {
     
     private func registerRepositories() {
         // Should define injected repositories
+    }
+    
+    private func configureDomainLayer() {
+        configureWorkers()
+        configureInteractors()
+    }
+    
+    private func configureWorkers() {
+        // Should define injected workers
+    }
+    
+    private func configureInteractors() {
+        // Should define injected interactors
     }
 }

@@ -11,17 +11,17 @@
 import UIKit
 
 protocol LandingViewControllerInput {
-    
+
 }
 
 protocol LandingViewControllerOutput {
-    
+
 }
 
 class LandingViewController: UIViewController, LandingViewControllerInput {
     
-    var output: LandingViewControllerOutput!
-    var router: LandingRouter!
+    var output: LandingViewControllerOutput?
+    var router: LandingRouter?
     
     // MARK: Object lifecycle
     
@@ -34,18 +34,22 @@ class LandingViewController: UIViewController, LandingViewControllerInput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigateToNextScene()
+    }
+    
+    private func navigateToNextScene() {
+        // Set router navigation to a defined scene or a cycle if this decision depends on domain's logic
     }
     
     // MARK: Event handling
     
     
     // MARK: Display logic
-    
 }
 
 //This should be on configurator but for some reason storyboard doesn't detect ViewController's name if placed there
 extension LandingViewController: LandingPresenterOutput {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        router.passDataToNextScene(segue)
+        router?.passDataToNextScene(segue)
     }
 }

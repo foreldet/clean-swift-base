@@ -14,5 +14,18 @@ import UIKit
 
 
 struct LandingScene {
-    
+    struct NavigateToNextScene {
+        
+        struct Request {
+            
+        }
+        
+        struct Response {
+            
+        }
+        
+        struct ViewModel {
+            
+        }
+    }
 }

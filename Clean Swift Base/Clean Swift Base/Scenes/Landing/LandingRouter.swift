@@ -24,9 +24,13 @@ protocol LandingRouterDataDestination:class {
 
 class LandingRouter: LandingRouterInput {
     
-    weak var viewController:LandingViewController!
-    weak private var dataSource:LandingRouterDataSource!
-    weak var dataDestination:LandingRouterDataDestination!
+    weak var viewController:LandingViewController?
+    weak private var dataSource:LandingRouterDataSource?
+    weak var dataDestination:LandingRouterDataDestination?
+    
+    struct SegueIdentifiers {
+        
+    }
     
     init(viewController:LandingViewController, dataSource:LandingRouterDataSource, dataDestination:LandingRouterDataDestination) {
         self.viewController = viewController

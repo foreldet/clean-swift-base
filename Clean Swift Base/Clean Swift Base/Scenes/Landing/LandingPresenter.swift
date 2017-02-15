@@ -11,17 +11,16 @@
 import UIKit
 
 protocol LandingPresenterInput {
-    
+
 }
 
 protocol LandingPresenterOutput: class {
-    
+
 }
 
 class LandingPresenter: LandingPresenterInput {
     
-    weak var output: LandingPresenterOutput!
+    weak var output: LandingPresenterOutput?
     
     // MARK: Presentation logic
-    
 }

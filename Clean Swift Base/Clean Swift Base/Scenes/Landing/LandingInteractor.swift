@@ -11,7 +11,7 @@
 import UIKit
 
 protocol LandingInteractorInput {
-    
+
 }
 
 protocol LandingInteractorOutput {
@@ -28,9 +28,7 @@ protocol LandingDataDestination {
 
 class LandingInteractor: LandingInteractorInput, LandingDataSource, LandingDataDestination {
     
-    var output: LandingInteractorOutput!
+    var output: LandingInteractorOutput?
     
     // MARK: Business logic
-    
-
 }

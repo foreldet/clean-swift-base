@@ -42,6 +42,8 @@ class LandingConfigurator: SwinjectContainerConfigurator {
         
         viewController.output = interactor
         viewController.router = router
+        
+        configureExternalConfiguratorContainers()
     }
     
     // Swinject configurator
